@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{ /*Declarar variables css*/
+--color-primario:    #151515;       /*#001524      #254336*/
+--color-secundario:   #FFFF;     /*#445D48    #DAD3BE*/
+--color-terciario:    #C73659;    /*#D6CC99       #914F1E*/
+--color-hover:    #272727;         /*#003961         #272727*/
+
+--fuente-montserrat:"Montserrat", sans-serif;
+--fuente-pt:"PT Serif", serif;
+
+}
+
+*{  /*el * indica que se aplica a todos los elementos del documento*/
+    padding: 0; /*quitar padding y margin de todos los elementos*/
+    margin: 0;
+}
+
+p{ /*esto solo es un ejemplo para practicar*/
+    margin: 0px;  /*espacio fuera del borde*/
+    border: 0px solid var(--color-primario); /*linea de borde fuera del padding*/
+    padding: 0px;  /* Espacio entre el contenido y el borde de la imagen*/
+}
+
+body{
+background-color:var(--color-primario);
+color:var(--color-secundario); /*color de texto*/
+/*height: 100vh; el cuercpo utiliza el 100% de la altura de la pagina */
+box-sizing: border-box;/*el borde y el relleno van incluidos dentro den cancho que se le indique a la caja ejemplo: si pongo 100px de ancho el borde y el relleno iran incluidos en ese tamaño, no se saldra del borde */
+
+}
+.header{
+    padding: 2% 0% 0% 15%; /*top right bottom left*/
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;  /*espacio entre los elementos de headermenu*/
+
+}
+
+.header__menu__link{
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 600; /*grosor*/
+    color: var(--color-terciario);
+    text-decoration: none;
+
+}
+.header__menu__link:hover{
+    color: var(--color-secundario);
+}
+.presentación{
+    display: flex;  /*flex box para manejar espacios d elos elementos*/
+    align-items: center; /*alinea todos los elementos en el centro*/
+    margin: 7% 15%; /*crea espacio fuera de los elementos*/
+    justify-content: space-between;/*espacio uniforme dentro y guera de los elemntos*/
+    
+}
+
+.presentación__contenido{
+
+    width:615px; /*ancho del contenido titulo y texto*/
+    display: flex;
+    flex-direction: column; /*el contenido se organizará en forma de columna*/
+    gap:40px; /*espacio entre cada elemento de la columna*/
+}
+
+.presentación__contenido__título{
+    font-size: 36px;/*tamaño de fuente*/
+    font-family: var(--fuente-pt);/*familia de fuente */
+    
+}
+.título__destaque{
+
+    color:var(--color-terciario);
+}
+
+.titulo__destaque__resalte{      /*Strong deja negrilla mientras que span no*/
+    border:2px solid;   /*borde fuera del texto dentro del span, color y grosor  */
+    padding: 0px;       /* distancia del texto al borde*/
+}
+
+
+.presentación__contenido__texto{
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+}
+
+.presentación__enlaces{
+ display: flex;
+ justify-content: space-between;/*crear un espacio entre los botones */
+ flex-direction: column;
+ gap: 32px;
+ align-items: center;
+}
+
+.presentación__enlaces__subtitulo{
+
+font-family: var(--fuente-pt);
+font-size: 24px;
+font-weight: 400;
+}
+.presentación__enlaces__link{
+width: 378px; /*ancho de los botones*/
+border: 2px solid var(--color-terciario);/*color del borde de los botones*/
+text-align: center;/*centrar el texto en los botones*/
+padding: 21.5px 0; /*creamos un espacio solo a lo alto para hacer los botones más grandes */
+border-radius: 8px;/*borde redondeado de los botones*/
+font-family: var(--fuente-montserrat);
+font-size: 24px;
+font-weight: 600;  /*semibold*/
+text-decoration: none;/*quitarle las decoraciones al texto*/
+color: var(--color-secundario);
+display: flex;
+justify-content: center;
+align-items: end;
+gap: 10px;
+}
+
+.presentación__enlaces__link:hover{/*hover es propiedad para cambiar de color cuando se pasa el raton por encima*/
+
+background-color: var(--color-hover);
+color: var(--color-terciario);
+
+}
+.mifoto{
+    width: 488px;
+    border-radius: 40px;
+    padding: 5px;
+    background-color: var(--color-terciario); /*color del fondo de la imagen */
+    border: 0px solid var(--color-secundario); /*color del borde */
+   
+   
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight: 400;
+
+}
